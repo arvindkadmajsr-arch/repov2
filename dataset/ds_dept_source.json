@@ -1,0 +1,36 @@
+{
+	"name": "ds_dept_source",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_dept_source",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "department.txt",
+				"container": "data"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "DeptNumber",
+				"type": "String"
+			},
+			{
+				"name": "DeptName",
+				"type": "String"
+			},
+			{
+				"name": "DeptLoc",
+				"type": "String"
+			}
+		]
+	}
+}
